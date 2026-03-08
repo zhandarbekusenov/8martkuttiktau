@@ -1,234 +1,144 @@
-<!doctype html>
-<html lang="kk" class="h-full">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>8 Наурыз Құттықтау</title>
-  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <script src="/_sdk/element_sdk.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&amp;family=Nunito:wght@400;600&amp;display=swap" rel="stylesheet">
-  <style>
-    @keyframes float {
-      0%, 100% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-20px) rotate(5deg); }
-    }
-    @keyframes floatReverse {
-      0%, 100% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-15px) rotate(-5deg); }
-    }
-    @keyframes sparkle {
-      0%, 100% { opacity: 0; transform: scale(0); }
-      50% { opacity: 1; transform: scale(1); }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-    }
-    .float-1 { animation: float 6s ease-in-out infinite; }
-    .float-2 { animation: floatReverse 7s ease-in-out infinite 0.5s; }
-    .float-3 { animation: float 8s ease-in-out infinite 1s; }
-    .float-4 { animation: floatReverse 5s ease-in-out infinite 0.3s; }
-    .float-5 { animation: float 9s ease-in-out infinite 1.5s; }
-    .sparkle { animation: sparkle 2s ease-in-out infinite; }
-    .fade-in-1 { animation: fadeInUp 1s ease-out 0.2s both; }
-    .fade-in-2 { animation: fadeInUp 1s ease-out 0.5s both; }
-    .fade-in-3 { animation: fadeInUp 1s ease-out 0.8s both; }
-    .fade-in-4 { animation: fadeInUp 1s ease-out 1.1s both; }
-    .pulse-slow { animation: pulse 3s ease-in-out infinite; }
-  </style>
-  <style>body { box-sizing: border-box; }</style>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
- </head>
- <body class="h-full m-0 p-0 overflow-auto">
-  <div id="app-wrapper" class="w-full h-full relative overflow-hidden" style="background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 25%, #fbcfe8 50%, #f9a8d4 75%, #f472b6 100%);"><!-- Animated flowers background -->
-   <div class="absolute inset-0 pointer-events-none overflow-hidden"><!-- Large flowers -->
-    <div class="float-1 absolute" style="top: 5%; left: 5%; font-size: 4rem; opacity: 0.7;">
-     🌸
-    </div>
-    <div class="float-2 absolute" style="top: 15%; right: 10%; font-size: 3.5rem; opacity: 0.6;">
-     🌷
-    </div>
-    <div class="float-3 absolute" style="bottom: 20%; left: 8%; font-size: 3rem; opacity: 0.65;">
-     🌹
-    </div>
-    <div class="float-4 absolute" style="top: 40%; right: 5%; font-size: 3.5rem; opacity: 0.55;">
-     🌺
-    </div>
-    <div class="float-5 absolute" style="bottom: 10%; right: 15%; font-size: 4rem; opacity: 0.6;">
-     🌸
-    </div><!-- Medium flowers -->
-    <div class="float-2 absolute" style="top: 25%; left: 15%; font-size: 2.5rem; opacity: 0.5;">
-     💐
-    </div>
-    <div class="float-4 absolute" style="bottom: 35%; right: 20%; font-size: 2rem; opacity: 0.5;">
-     🌼
-    </div>
-    <div class="float-1 absolute" style="top: 60%; left: 3%; font-size: 2.5rem; opacity: 0.55;">
-     🌻
-    </div>
-    <div class="float-3 absolute" style="bottom: 5%; left: 25%; font-size: 2rem; opacity: 0.5;">
-     🌷
-    </div><!-- Small decorative elements -->
-    <div class="float-5 absolute" style="top: 8%; left: 40%; font-size: 1.5rem; opacity: 0.4;">
-     ✨
-    </div>
-    <div class="float-2 absolute" style="top: 70%; right: 8%; font-size: 1.5rem; opacity: 0.45;">
-     💫
-    </div>
-    <div class="float-4 absolute" style="bottom: 25%; left: 35%; font-size: 1.2rem; opacity: 0.4;">
-     🦋
-    </div>
-    <div class="float-1 absolute" style="top: 50%; left: 45%; font-size: 1.8rem; opacity: 0.35;">
-     🌿
-    </div><!-- Sparkles -->
-    <div class="sparkle absolute" style="top: 20%; left: 30%; font-size: 1rem; animation-delay: 0s;">
-     ✦
-    </div>
-    <div class="sparkle absolute" style="top: 35%; right: 25%; font-size: 0.8rem; animation-delay: 0.5s;">
-     ✦
-    </div>
-    <div class="sparkle absolute" style="bottom: 40%; left: 20%; font-size: 1.2rem; animation-delay: 1s;">
-     ✦
-    </div>
-    <div class="sparkle absolute" style="bottom: 15%; right: 35%; font-size: 0.9rem; animation-delay: 1.5s;">
-     ✦
-    </div>
-   </div><!-- Main content -->
-   <div class="relative z-10 flex flex-col items-center justify-center min-h-full px-6 py-12"><!-- Decorative top element -->
-    <div class="fade-in-1 text-6xl mb-4 pulse-slow">
-     💐
-    </div><!-- Main title -->
-    <h1 id="main-title" class="fade-in-1 text-center mb-6" style="font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 10vw, 6rem); font-weight: 700; color: #be185d; text-shadow: 2px 2px 4px rgba(190, 24, 93, 0.2);">8 Наурыз</h1><!-- Subtitle -->
-    <div class="fade-in-2 flex items-center gap-3 mb-8"><span style="color: #db2777;">───</span> <span style="font-family: 'Nunito', sans-serif; font-size: 1.2rem; color: #9d174d; letter-spacing: 0.2em; text-transform: uppercase;">Халықаралық әйелдер күні</span> <span style="color: #db2777;">───</span>
-    </div><!-- Greeting card -->
-    <div class="fade-in-3 w-full max-w-2xl rounded-3xl p-8 md:p-12 text-center relative" style="background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); box-shadow: 0 25px 50px -12px rgba(190, 24, 93, 0.25);"><!-- Card decorations -->
-     <div class="absolute -top-4 -left-4 text-4xl">
-      🌹
-     </div>
-     <div class="absolute -top-4 -right-4 text-4xl">
-      🌹
-     </div>
-     <div class="absolute -bottom-4 -left-4 text-4xl">
-      🌷
-     </div>
-     <div class="absolute -bottom-4 -right-4 text-4xl">
-      🌷
-     </div><!-- Greeting text -->
-     <p id="greeting-text" style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.2rem, 3vw, 1.6rem); line-height: 1.9; color: #831843;">Қымбатты аналар, апалар, қарындастар!<br><br>
-       Көктемнің ең әсем мерекесі – 8 Наурыз күнімен шын жүректен құттықтаймын!<br><br>
-       Өмірлеріңіз гүлдей жайнап, жүздеріңіз әрдайым күлкіге толы болсын! Махаббат пен бақытқа кенеліп, денсаулық пен шаттық сіздерді ешқашан тастамасын!<br><br>
-       Сіздер – біздің өмірімізді нұрландыратын жарық жұлдыздарсыздар! ⭐</p><!-- Signature -->
-     <div class="mt-8 pt-6" style="border-top: 2px dashed #f9a8d4;">
-      <p id="signature" style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.4rem; color: #be185d;">Құрметпен және сүйіспеншілікпен 💕</p>
-     </div>
-    </div><!-- Bottom decoration -->
-    <div class="fade-in-4 flex items-center gap-4 mt-10"><span class="text-3xl">🌸</span> <span class="text-4xl">💐</span> <span class="text-3xl">🌺</span>
-    </div>
-   </div>
-  </div>
-  <script>
-    const defaultConfig = {
-      main_title: '8 Наурыз',
-      greeting_text: 'Қымбатты аналар, апалар, қарындастар!\n\nКөктемнің ең әсем мерекесі – 8 Наурыз күнімен шын жүректен құттықтаймын!\n\nӨмірлеріңіз гүлдей жайнап, жүздеріңіз әрдайым күлкіге толы болсын! Махаббат пен бақытқа кенеліп, денсаулық пен шаттық сіздерді ешқашан тастамасын!\n\nСіздер – біздің өмірімізді нұрландыратын жарық жұлдыздарсыздар! ⭐',
-      signature: 'Құрметпен және сүйіспеншілікпен 💕',
-      background_color: '#fdf2f8',
-      card_color: '#ffffff',
-      text_color: '#831843',
-      accent_color: '#be185d',
-      decoration_color: '#db2777',
-      font_family: 'Cormorant Garamond',
-      font_size: 16
-    };
-
-    async function onConfigChange(config) {
-      const mainTitle = document.getElementById('main-title');
-      const greetingText = document.getElementById('greeting-text');
-      const signature = document.getElementById('signature');
-      const appWrapper = document.getElementById('app-wrapper');
-
-      if (mainTitle) {
-        mainTitle.textContent = config.main_title || defaultConfig.main_title;
-        mainTitle.style.color = config.accent_color || defaultConfig.accent_color;
-        mainTitle.style.fontFamily = `${config.font_family || defaultConfig.font_family}, serif`;
-      }
-
-      if (greetingText) {
-        const text = config.greeting_text || defaultConfig.greeting_text;
-        greetingText.innerHTML = text.replace(/\n/g, '<br>');
-        greetingText.style.color = config.text_color || defaultConfig.text_color;
-        greetingText.style.fontFamily = `${config.font_family || defaultConfig.font_family}, serif`;
-      }
-
-      if (signature) {
-        signature.textContent = config.signature || defaultConfig.signature;
-        signature.style.color = config.accent_color || defaultConfig.accent_color;
-        signature.style.fontFamily = `${config.font_family || defaultConfig.font_family}, serif`;
-      }
-
-      if (appWrapper) {
-        const bgColor = config.background_color || defaultConfig.background_color;
-        appWrapper.style.background = `linear-gradient(135deg, ${bgColor} 0%, #fce7f3 25%, #fbcfe8 50%, #f9a8d4 75%, #f472b6 100%)`;
-      }
-    }
-
-    function mapToCapabilities(config) {
-      return {
-        recolorables: [
-          {
-            get: () => config.background_color || defaultConfig.background_color,
-            set: (value) => { config.background_color = value; window.elementSdk.setConfig({ background_color: value }); }
-          },
-          {
-            get: () => config.card_color || defaultConfig.card_color,
-            set: (value) => { config.card_color = value; window.elementSdk.setConfig({ card_color: value }); }
-          },
-          {
-            get: () => config.text_color || defaultConfig.text_color,
-            set: (value) => { config.text_color = value; window.elementSdk.setConfig({ text_color: value }); }
-          },
-          {
-            get: () => config.accent_color || defaultConfig.accent_color,
-            set: (value) => { config.accent_color = value; window.elementSdk.setConfig({ accent_color: value }); }
-          },
-          {
-            get: () => config.decoration_color || defaultConfig.decoration_color,
-            set: (value) => { config.decoration_color = value; window.elementSdk.setConfig({ decoration_color: value }); }
-          }
-        ],
-        borderables: [],
-        fontEditable: {
-          get: () => config.font_family || defaultConfig.font_family,
-          set: (value) => { config.font_family = value; window.elementSdk.setConfig({ font_family: value }); }
-        },
-        fontSizeable: {
-          get: () => config.font_size || defaultConfig.font_size,
-          set: (value) => { config.font_size = value; window.elementSdk.setConfig({ font_size: value }); }
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8 Наурыз Құттықтау</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #fff5f7;
+            overflow-x: hidden;
         }
-      };
-    }
+        .cursive {
+            font-family: 'Marck Script', cursive;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #ff4e50, #f9d423);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .flower {
+            position: absolute;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.6;
+            animation: drift var(--duration) ease-in-out infinite;
+        }
+        @keyframes drift {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(20px, 30px) rotate(10deg); }
+        }
+        .card-container {
+            perspective: 1000px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border: 2px solid #fee2e2;
+            box-shadow: 0 20px 40px rgba(255, 182, 193, 0.3);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .btn-grad {
+            background-image: linear-gradient(to right, #FF512F 0%, #DD2476  51%, #FF512F  100%);
+            transition: 0.5s;
+            background-size: 200% auto;
+        }
+        .btn-grad:hover {
+            background-position: right center;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
 
-    function mapToEditPanelValues(config) {
-      return new Map([
-        ['main_title', config.main_title || defaultConfig.main_title],
-        ['greeting_text', config.greeting_text || defaultConfig.greeting_text],
-        ['signature', config.signature || defaultConfig.signature]
-      ]);
-    }
+    <!-- Фондағы гүлдер -->
+    <div id="flower-bg"></div>
 
-    if (window.elementSdk) {
-      window.elementSdk.init({
-        defaultConfig,
-        onConfigChange,
-        mapToCapabilities,
-        mapToEditPanelValues
-      });
-    }
-  </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d8f938d8385e4bf',t:'MTc3Mjk0OTE3My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+    <div class="card-container w-full max-w-2xl relative z-10">
+        <div class="card rounded-3xl p-8 md:p-12 text-center">
+            <header class="mb-8">
+                <h2 class="text-pink-500 font-semibold tracking-widest uppercase mb-2">Көктем мерекесі</h2>
+                <h1 class="cursive text-5xl md:text-7xl gradient-text mb-4">8 Наурыз</h1>
+                <div class="h-1 w-24 bg-pink-300 mx-auto rounded-full"></div>
+            </header>
+
+            <main class="space-y-6">
+                <p class="text-xl md:text-2xl text-gray-700 leading-relaxed font-light">
+                    Аяулы, нәзік те сымбатты <span class="font-semibold text-pink-600">Арулар!</span>
+                </p>
+                <p class="text-gray-600 text-lg leading-relaxed italic">
+                    Сіздерді көктемнің алғашқы мерекесімен шын жүректен құттықтаймыз! Жүздеріңізден күлкі, көңілдеріңізден көктем кетпесін. Әр атқан таңдарыңыз қуанышқа, әр кештеріңіз бақытқа толсын! 
+                </p>
+                <div class="grid grid-cols-2 gap-4 text-sm font-medium text-pink-500 py-4 border-y border-pink-100">
+                    <div>✨ Денсаулық</div>
+                    <div>🌸 Сұлулық</div>
+                    <div>💖 Махаббат</div>
+                    <div>☀️ Сәттілік</div>
+                </div>
+            </main>
+
+            <footer class="mt-8">
+                <button onclick="celebrate()" class="btn-grad text-white px-8 py-3 rounded-full font-bold shadow-lg transform active:scale-95">
+                    Құттықтауды қабыл ал! 🌷
+                </button>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script>
+        // Фонға гүлдер мен жапырақтар қосу
+        const bg = document.getElementById('flower-bg');
+        const items = ['🌸', '🌷', '🌺', '🌹', '🍃', '🌼'];
+        
+        for (let i = 0; i < 20; i++) {
+            const el = document.createElement('div');
+            el.className = 'flower text-3xl';
+            el.innerText = items[Math.floor(Math.random() * items.length)];
+            el.style.left = Math.random() * 100 + 'vw';
+            el.style.top = Math.random() * 100 + 'vh';
+            el.style.setProperty('--duration', (Math.random() * 3 + 2) + 's');
+            el.style.fontSize = (Math.random() * 20 + 20) + 'px';
+            bg.appendChild(el);
+        }
+
+        function celebrate() {
+            // Конфетти шашу
+            const duration = 3 * 1000;
+            const end = Date.now() + duration;
+
+            (function frame() {
+                confetti({
+                    particleCount: 3,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 },
+                    colors: ['#ff69b4', '#ff1493', '#ffd700']
+                });
+                confetti({
+                    particleCount: 3,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 },
+                    colors: ['#ff69b4', '#ff1493', '#ffd700']
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
+            
+            // Сәл хабарлама көрсету
+            const btn = event.target;
+            const originalText = btn.innerText;
+            btn.innerText = "Мерекеңізбен! 🎉";
+            setTimeout(() => btn.innerText = originalText, 3000);
+        }
+    </script>
+</body>
 </html>
